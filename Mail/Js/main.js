@@ -11,3 +11,4 @@ const invitedEmail = [
 
 const userEmail = prompt("Inserisci la tua mail:");
 console.log(userEmail);
+c;

@@ -9,7 +9,10 @@ const invitedEmail = [
   "cioa@icloud.com",
 ];
 let userEmail = "";
+let isFindEmail = false;
+let outputMessage = "";
 
+// Verify if the input respect the riquirments else ask again
 do {
   userEmail = prompt("Inserisci la tua mail:");
   console.log(userEmail);
@@ -19,11 +22,11 @@ do {
     userEmail.endsWith(".com")
   )
 );
+
+// print user email
 console.log(`La mail dell'utente: ${userEmail}`);
 
-let isFindEmail = false;
-let outputMessage = "";
-
+// Search if the user email is in the array of invited email
 for (let i = 0; i < invitedEmail.length && isFindEmail === false; i++) {
   const currentValue = invitedEmail[i];
   if (currentValue === userEmail) {
@@ -35,4 +38,5 @@ for (let i = 0; i < invitedEmail.length && isFindEmail === false; i++) {
   }
 }
 
+// print the message to the user
 alert(outputMessage);

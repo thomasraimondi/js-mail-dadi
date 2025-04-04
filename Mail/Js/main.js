@@ -11,4 +11,8 @@ const invitedEmail = [
 
 const userEmail = prompt("Inserisci la tua mail:");
 console.log(userEmail);
-c;
+
+for (let i = 0; i < invitedEmail.length; i++) {
+  const currentValue = invitedEmail[i];
+  console.log(currentValue);
+}

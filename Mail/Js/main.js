@@ -10,7 +10,7 @@ const invitedEmail = [
 ];
 let userEmail = "";
 let isFindEmail = false;
-let outputMessage = "";
+let outputMessage = "La tua mail non è in lista";
 
 // Verify if the input respect the riquirments else ask again
 do {
@@ -27,16 +27,29 @@ do {
 console.log(`La mail dell'utente: ${userEmail}`);
 
 // Search if the user email is in the array of invited email
-for (let i = 0; i < invitedEmail.length && isFindEmail === false; i++) {
+
+//With For
+// for (let i = 0; i < invitedEmail.length; i++) {
+//   const currentValue = invitedEmail[i];
+//   if (currentValue === userEmail) {
+//     outputMessage = "Benvenuto alla festa ";
+//     isFindEmail = true;
+//     console.log(`Mail verificata: ${currentValue}`);
+//   }
+// }
+
+//With While
+let i = 0;
+while (isFindEmail != true) {
   const currentValue = invitedEmail[i];
+
   if (currentValue === userEmail) {
     outputMessage = "Benvenuto alla festa ";
     isFindEmail = true;
     console.log(`Mail verificata: ${currentValue}`);
-  } else {
-    outputMessage = "La tua mail non è in lista";
   }
+  i++;
 }
 
 // print the message to the user
-alert(outputMessage);
+console.log(outputMessage);
